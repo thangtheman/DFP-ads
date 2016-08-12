@@ -1,0 +1,123 @@
+
+#photoCarousel .space {
+    margin: 4px 0;
+}
+
+#photoCarousel .slideImg {
+    width: auto;
+    height: auto;
+    max-height: 615px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width:678px) {
+    #photoCarousel .slick-slide img {
+        max-height: 210px;
+    }
+}
+
+#photoCarousel .slider-Img {
+    background-color: #f4f5f6;
+}
+
+/*Slick arrow*/
+#photoCarousel .prevArrow {
+    left: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(0%,-50%);
+    z-index: 1;
+    background-color: #f5f5f5;
+    opacity: .8;
+    padding: 30px 10px;
+}
+
+#photoCarousel .nextArrow {
+    right: 0;
+    top: 50%;
+    position: absolute;
+    transform: translate(0%,-50%);
+    z-index: 1;
+    opacity: .8;
+    background-color: #f5f5f5;
+    padding: 30px 10px;
+}
+
+@media screen and (max-width: 767px)  {
+    #photoCarousel .prevArrow {
+        padding: 15px 5px;
+    }
+
+    #photoCarousel .nextArrow {
+        padding: 15px 5px;
+    }
+}
+#photoCarousel .prevArrow,#photoCarousel .nextArrow {
+    color: #ccc;
+}
+
+#photoCarousel .prevArrow:hover,#photoCarousel .nextArrow:hover {
+    color: #fd7a04;
+}
+
+/*Slide Info*/
+#photoCarousel .no-gutter [class^="col-"],[class*=" col-"] {
+    margin: 15px 0;
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+#photoCarousel h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 16px;
+    line-height: 16px;
+    font-family: "Source Sans Pro";
+}
+
+#photoCarousel .ads {
+    font-size: 14px;
+    color: #999;
+}
+
+#photoCarousel p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    line-height: 18px;
+}
+
+#photoCarousel p {
+    clear: both;
+}
+
+#photoCarousel .counterPhoto {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 10px;
+    line-height: 16px;
+}
+
+/*Modal SPace*/
+#photoCarousel .modalSpace [class^='col-'] {
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+
+#slideCount {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/*Border*/
+#photoCarousel {
+    border-bottom: 1px solid #eee;
+}
+
+body.modal-open {
+    position: relative;
+    height: 100%;
+}
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ADs</title>
+    <link rel="stylesheet" href="assets/css/core.css">
+    <script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+    <script>
+        // Load GPT asynchronously
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+        (function() {
+            var gads = document.createElement('script');
+            gads.async = true;
+            var useSSL = 'https:' == document.location.protocol;
+            gads.src = (useSSL ? 'https:' : 'http:') +
+                    '//www.googletagservices.com/tag/js/gpt.js';
+            var node = document.getElementsByTagName('script')[0];
+            node.parentNode.insertBefore(gads, node);
+        })();
+    </script>
+    <script>
+        googletag.cmd.push(function() {
+            var mapping = googletag.sizeMapping().
+            addSize([0, 0], [300, 250]).
+            addSize([1024, 768], [970,90]).
+            build();
+            var mapping1 = googletag.sizeMapping().
+            addSize([0, 0], [300, 600]).
+            addSize([1024, 768], [300,250]).
+            build();
+            var mapping2 = googletag.sizeMapping().
+            addSize([0, 0], [320, 50]).
+            addSize([1024, 768], [970,90]).
+            build();
+            window.LeaderSlot= googletag.defineSlot('/155594340/adBanner1', [[300, 250], [970, 90]], 'adBanner1').defineSizeMapping(mapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+            window.LeaderSlot= googletag.defineSlot('/155594340/adBanner2', [[300, 250], [970, 90]], 'adBanner2').defineSizeMapping(mapping).setCollapseEmptyDiv(true).addService(googletag.pubads());
+            window.LeaderSlot= googletag.defineSlot('/155594340/adRect1', [300, 250], 'adRect1').setCollapseEmptyDiv(true).addService(googletag.pubads());
+            window.LeaderSlot= googletag.defineSlot('/155594340/adBottom', [320, 50], 'adBottom').addService(googletag.pubads());
+            window.LeaderSlot=  googletag.defineSlot('/155594340/adRect2', [[300, 250], [300, 600]], 'adRect2').defineSizeMapping(mapping1).setCollapseEmptyDiv(true).addService(googletag.pubads());
+            window.LeaderSlot= googletag.defineSlot('/155594340/adTop', [[320, 50], [970, 90]], 'adTop').setCollapseEmptyDiv(true).defineSizeMapping(mapping2).addService(googletag.pubads());
+            googletag.enableServices();
+        });
+    </script>
+</head>
+<body >
+<div class="container">
+    <!--Ads Banner 1-->
+    <!--<div class="dfpCodes" id="adBanner1">-->
+<div style="padding-top: 2000px"></div>
+    <!--</div>&lt;!&ndash;Ads Banner 1 END&ndash;&gt;-->
+    <!--&lt;!&ndash;Ads Banner 2&ndash;&gt;-->
+    <!--<div class="dfpCodes" id="adBanner2">-->
+
+    <!--</div>&lt;!&ndash;Ads Banner 2 END&ndash;&gt;-->
+    <!--&lt;!&ndash;Ads Rect 1&ndash;&gt;-->
+    <!--<div class="dfpCodes" id="adRect1">-->
+
+    <!--</div>&lt;!&ndash;Ads Rect 1 END&ndash;&gt;-->
+    <!--&lt;!&ndash;Ads Rect 2&ndash;&gt;-->
+    <!--<div class="dfpCodes" id="adRect2">-->
+
+    <!--</div>&lt;!&ndash;Ads Rect 2 END&ndash;&gt;-->
+    <!--&lt;!&ndash;Ads Top&ndash;&gt;-->
+    <!--<div class="dfpCodes" id="adTop">-->
+
+    <!--</div>&lt;!&ndash;Ads Top END&ndash;&gt;-->
+    <!--Ads Bottom-->
+    <div alt="" class="AdPlace dfpCodes adBottomFix" id="adBottom">
+        <button id="xtoHideadBottomFix" type="button"><span>x</span></button>
+    </div><!--Ads Bottom END-->
+</div>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script>
+    <!--Ads show after not scrolling for 5 seconds and hide after rescroll or click-->
+    $('#adBottom').hide();
+
+    if ( $(window).width() < 700) {
+
+        $(window).scroll(function () {
+            clearTimeout($.data(this, 'scrollTimer'));
+            $.data(this, 'scrollTimer', setTimeout(function () {
+                $('#adBottom').show();
+                console.log("Haven't scrolled in 5s!");
+            }, 5000));
+        });
+        (function ($) {
+            var on = $.fn.on, timer;
+            $.fn.on = function () {
+                var args = Array.apply(null, arguments);
+                var last = args[args.length - 1];
+
+                if (isNaN(last) || (last === 1 && args.pop())) return on.apply(this, args);
+
+                var delay = args.pop();
+                var fn = args.pop();
+
+                args.push(function () {
+                    var self = this, params = arguments;
+                    clearTimeout(timer);
+                    timer = setTimeout(function () {
+                        fn.apply(self, params);
+                    }, delay);
+                });
+
+                return on.apply(this, args);
+            };
+        }(this.jQuery || this.Zepto));
+        $(window).on('scroll', function (e) {
+            $('#adBottom').hide();
+            console.log('Scroll Was Triggered');
+        });
+    } else {
+        $('#adBottom').hide();
+    }
+    $("#xtoHideadBottomFix").click(function(){
+        $("#adBottom").hide();
+    });
+</script>
+<script>
+    googletag.cmd.push(function() {
+        googletag.display('adBanner1');
+        googletag.display('adBanner2');
+        googletag.display('adBottom');
+        googletag.display('adRect1');
+        googletag.display('adRect2');
+        googletag.display('adTop');
+    });
+</script>
+</body>
+</html>

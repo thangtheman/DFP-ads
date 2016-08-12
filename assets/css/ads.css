@@ -1,0 +1,22 @@
+.adBottomFix{
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -10px);
+    display: none;
+}
+#xtoHideadBottomFix {
+    position: absolute;
+    right: -12px;
+    color: #ffffff;
+    top: -12px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #999999;
+    border-radius: 15px;
+    line-height: 15px;
+}
+.dfpCodes{
+    text-align: center;
+}
